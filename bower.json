@@ -1,0 +1,11 @@
+{
+  "name": "streetart_public_list",
+  "description": "Describe this app",
+  "authors": [
+    "Your name here"
+  ],
+  "private": true,
+  "dependencies": {
+    "core": "https://github.com/CityofToronto/corejs.git#3.x.x"
+  }
+}

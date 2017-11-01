@@ -1,0 +1,144 @@
+$main-font-size: 10px;
+
+#maincontent ul.nav { overflow:inherit}
+
+// added by Graham
+#maincontent #view_pane .dataTable th, #maincontent #view_pane .dataTable td {word-break: keep-all;white-space:nowrap}
+//.dataTable th, .dataTable td {white-space:nowrap}
+
+#maincontent .dataTables_scrollHeadInner table.dataTable, #maincontent form .dataTables_scrollHeadInner table.dataTable {
+    margin-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+#maincontent .dataTables_scrollBody table.dataTable, #maincontent form .dataTables_scrollBody table.dataTable {
+    margin-top: 0px;
+    margin-bottom:0px;
+}
+
+#maincontent .dataTables_scrollFoot table.dataTable{
+margin-top: 0px;
+}
+#admin_search {
+  margin-top: 5px;
+}
+#admininterface #app_Navbar{margin-top:10px;font-size:85%;}
+#admininterface #admin_search .form-control{font-size:90%;}
+#admininterface #viewtitle{font-size:90%;}
+#app-header h1 {font-size:100%;}
+#admininterface h2 {
+  font-size: 2em;
+  margin: 0;
+}
+#maincontent #view_pane th{font-size: 85%;padding:3px;margin:0;}
+#maincontent #view_pane td{font-size:85%;padding:3px;margin:0;}
+#maincontent #view_pane {font-size:85%;}
+#appDisplay select.form-control {
+  height: 28px;
+}
+
+.bootstrap-datetimepicker-widget table td.active, .bootstrap-datetimepicker-widget table td.active:hover {
+    background-color: #337ab7 !important;
+    color: #ffffff;
+}
+
+//body {
+//  font-size: 14px;
+//}
+
+//table {
+ // font-size: 16px;
+//}
+
+// specific for streetArt application
+// previous values width: 570px; height: 380px; margin:5px
+
+.workpics{width:513px; height:342px; margin:20px}
+.viewworkpics{width:120px; height:80px; margin:1px; float:left; padding-bottom:10px}
+.detaillabel{
+  font-weight: bold;
+}
+
+#container-fluid{
+  font-size: 1em;
+}
+
+#app-header .container-fluid h1 {
+  font-size: 100%;
+}
+
+#streetartartistlisttable{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 0.75em;
+}
+#streetartartistlisttable .streetartartistlisttablerow td {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 1em;
+  padding: 0px;
+  border:0px
+}
+
+.streetartartistlisttablerow{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#streetartartistlisttable .streetartartistlisttextrow td{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-bottom-width: 0px;
+  border:0px;
+}
+.fldsettxt {
+  font-size: .7em;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.headerrow {
+  font-weight: bold;
+  padding-left: 15px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border:0px;
+}
+
+.headerrowcolored {
+  color:red;
+  font-weight: bold;
+  padding: 0px 15px 10px 15px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border:0px;
+}
+
+.detailLine {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(197, 197, 197);
+  margin: 0px;
+}
+
+#maincontent .artistname {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#maincontent .streetartartistlisttablerow {
+  border-bottom: 0px solid #ddd; 
+  padding:0px;
+}
+.detailLineText {
+  border-bottom: 0px; 
+  padding:0px;
+}
+#maincontent td .streetartartistlisttablerow {
+  padding:0px;
+}
+#maincontent div .profile {border-bottom: 1px solid #ddd; }
+
+#maincontent #streetartartistlisttable td {
+  padding: 3px 0px; 
+}

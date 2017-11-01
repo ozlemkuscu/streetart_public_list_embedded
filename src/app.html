@@ -1,0 +1,39 @@
+<!-- cot-app:head -->
+<!--@exec startBuildTagWithCacheBuster('styles/main.css')-->
+<!-- core:css -->
+<!-- endinject -->
+<link rel="stylesheet" type="text/css" href="/resources/streetart_public_list/styles/main.css">
+<!-- endbuild -->
+<!--@exec startBuildTagWithCacheBuster('styles/core_print.css', 'media="print"')-->
+<!-- core_print:css -->
+<!-- endinject -->
+<!-- endbuild -->
+<!-- cot-app:head end-->
+<!-- cot-app:body -->
+<div class="streetart_public_list_container">
+  <section id="admininterface">
+    <div calss="row">
+      <div id="streetartArtistListApp">
+        <table id="streetartartistlisttable" class="licious"></table>
+        <h2 class="sr-only">StreetARToronto Artist Database</h2>
+        <div><a id="gotoListingTop" class="safesidebar hidden" href="">top of listing</a></div>
+      </div>
+  </section>
+  </div>
+  <!-- cot-app:body end-->
+  <!-- cot-app:footer -->
+  <!--@exec startBuildTagWithCacheBuster('scripts/main.js')-->
+  <!-- core:js -->
+  <!-- endinject -->
+  <script type="text/javascript" src="/resources/streetart_public_list/scripts/streetart_list_form.js"></script>
+  <script type="text/javascript" src="/resources/streetart_public_list/scripts/streetart_list_main.js"></script>
+  <!-- endbuild -->
+  <!--@if ENV!='prod'-->
+<!--script type="text/javascript">
+console.log('graffiti_exemption_public running on <!--@echo ENV--> environment');
+console.log('graffiti_exemption_public qa release: <!--@echo QA_RELEASE-->');
+console.log('graffiti_exemption_public build: <!--@echo BUILD_ID-->');
+</script-->
+<!--@endif-->
+
+  <!-- cot-app:footer end-->
