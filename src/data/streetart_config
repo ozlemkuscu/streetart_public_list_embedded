@@ -1,9 +1,9 @@
 {
   "title": "streetARToronto",
   "v2": { "title": "StreetARToronto" },
-  "dateTimeFormat": "MM/DD/YYYY hh:mm a",
+  "dateTimeFormat": "MM/DD/YYYY HH:mm",
   "dateFormat": "MM/DD/YYYY",
-  "dateFormatView": "YYYY/MM/DD h:mm a",
+  "dateFormatView": "YYYY/MM/DD HH:mm",
   "default_repo": "streetart",
   "timeOutMsg": "<br><br><p><strong>The session will time out after 15 minutes of inactivity, please save your work.</strong></p>",
   "button": {

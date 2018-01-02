@@ -16,6 +16,7 @@ let gblArtistData = [];
 $(function () {
 
   httpHost = '/* @echo ENV*/';//'dev';
+  //console.log("httpHost",httpHost);
 
   let cotApp = new CotApp();
   //@if ENV='local'
@@ -112,9 +113,14 @@ $(function () {
       let checkVal = item.WorkToPublic;
       if (checkVal == "Yes") {
         if (item.OrganizationDescription != undefined) {
-          displayProfileVal = item.OrganizationDescription.substring(0, 200);
+          if (item.OrganizationDescription.length > 200) {
+            displayProfileVal = item.OrganizationDescription.substring(0, 200);
+            if (item.OrganizationDescription.substring(201, 202) != " ") {
+              displayProfileVal = displayProfileVal.substring(0, displayProfileVal.lastIndexOf(" "));
+            }
+            displayProfileVal = displayProfileVal + "&#133";
+          }
         }
-        displayProfileVal != "" ? displayProfileVal = displayProfileVal + "..." : "";
       }
       strRows += "<tr class='streetartartistlisttablerow' id='streetartartistlisttablerow" + i + "'>";
       strRows += "<td>";
@@ -150,8 +156,12 @@ $(function () {
         })
       }
 
-      for (let m = 0; m < imageURLSRC.length; m++) {
-        strRows += '<a class="displayimage" data-toggle="tooltip" data-placement="bottom" title="View Art Work ' + (m + 1) + ' from ' + displayPreferredContactName + '" href="#2222" data-doc-id="' + imageURLSRC[m] + '" data-title="Work Example ' + (m + 1) + ' for ' + displayPreferredContactName + ' - File Name : ' + imageFileName[m] + '">'; // imageURLSRC[m]
+      let numImages = imageURLSRC.length>5 ? 5 : imageURLSRC.length;
+
+      for (let m = 0; m < numImages; m++) {
+      // for (let m = 0; m < imageURLSRC.length; m++) {
+      //  strRows += '<a class="displayimage" data-toggle="tooltip" data-placement="bottom" title="View Art Work ' + (m + 1) + ' from ' + displayPreferredContactName + '" href="#2222" data-doc-id="' + imageURLSRC[m] + '" data-title="Work Example ' + (m + 1) + ' for ' + displayPreferredContactName + ' - File Name : ' + imageFileName[m] + '">'; // imageURLSRC[m]
+        strRows += '<a class="displayimage" data-toggle="tooltip" data-placement="bottom" title="View Art Work ' + (m + 1) + ' from ' + displayPreferredContactName + '" href="#2222" data-doc-id="' + imageURLSRC[m] + '" data-title="Work Example ' + (m + 1) + ' for ' + displayPreferredContactName + '">'; // imageURLSRC[m]
         strRows += '<img class="viewworkpics icons" data-toggle="tooltip" data-placement="bottom" title="Work Example ' + (m + 1) + ' for ' + displayPreferredContactName + ' - File Name : ' + imageFileName[m] + '" alt="Work Example ' + (m + 1) + ' for ' + displayPreferredContactName + ' - File Name : ' + imageFileName[m] + '" src="' + imageURLSRC[m] + '">';
         strRows += '</a>';
       }
@@ -198,7 +208,7 @@ $(function () {
   function drawImage(imageURL, titleVal) {
     let strHTML = "";
     strHTML += '<div>';
-    imageURL = '<img class="workpics" alt="Work Example" src="' + imageURL + '">';
+    imageURL = '<img class="workpics" alt="'+titleVal+'" src="' + imageURL + '">';
     strHTML += imageURL;
     strHTML += '</div>';
     CotApp.showModal({ title: titleVal, body: strHTML }); //embedded apps
